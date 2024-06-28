@@ -25,7 +25,7 @@ jobs:
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
         with:
-          java-version: 8
+          cordova-version: 8
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
@@ -56,6 +56,6 @@ jobs:
        - name: Publish to Registry
          uses: elgohr/Publish-Docker-Github-Action@master
          with: 
-           name: sourcefrog/cicd
+           name: liamdeutsch/cicd
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_PASSWORD }}
